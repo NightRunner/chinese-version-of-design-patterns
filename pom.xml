@@ -18,6 +18,7 @@
         <module>facade</module>
         <module>bridge</module>
         <module>composite</module>
+        <module>flyweight</module>
     </modules>
     <packaging>pom</packaging>
 
