@@ -4,7 +4,9 @@
 
 中文版本的设计模式详解 以游戏和生活中的其他场景讲解设计模式的实际用法,便于理解吸收.
 
-思路以https://github.com/iluwatar/java-design-patterns为主
+思路以
+https://github.com/iluwatar/java-design-patterns  
+为主
 
 #### 软件架构
 
