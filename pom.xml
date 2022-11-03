@@ -17,6 +17,7 @@
         <module>proxy</module>
         <module>facade</module>
         <module>bridge</module>
+        <module>composite</module>
     </modules>
     <packaging>pom</packaging>
 
