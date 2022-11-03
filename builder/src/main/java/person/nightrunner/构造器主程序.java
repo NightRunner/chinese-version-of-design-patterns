@@ -1,7 +1,5 @@
 package person.nightrunner;
 
-import lombok.ToString;
-
 /**
  * 用于constructor的"反范式",因为范式型constructor的参数过多,例如本例需要7个参数,后续还有可能增加更多参数,使用构造器这种方式只需要增加代码,不需要修改原有代码
  */
@@ -17,7 +15,6 @@ public class 构造器主程序 {
     }
 }
 
-@ToString
 class 角色 {
     private 职业 职业;
     private 发型 发型;
@@ -35,6 +32,19 @@ class 角色 {
         this.装甲 = 构造器.装甲;
         this.职业 = 构造器.职业;
         this.副手 = 构造器.副手;
+    }
+
+    @Override
+    public String toString() {
+        return "角色:{"
+                + "角色名称:" + this.角色名称 + ", "
+                + "发型:" + this.发型 + ", "
+                + "发色:" + this.发色 + ", "
+                + "武器:" + this.武器 + ", "
+                + "装甲:" + this.装甲 + ", "
+                + "职业:" + this.职业 + ", "
+                + "副手:" + this.副手 + ", "
+                + "}";
     }
 
     public static class 构造器 {

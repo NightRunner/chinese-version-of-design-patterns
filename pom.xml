@@ -22,16 +22,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-                <dependency>
-                    <groupId>org.projectlombok</groupId>
-                    <artifactId>lombok</artifactId>
-                    <version>1.18.10</version>
-                </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <name>design-patterns-chinese</name>
     <url>http://maven.apache.org</url>
 

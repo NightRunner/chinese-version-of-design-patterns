@@ -1,6 +1,5 @@
 package person.nightrunner;
 
-import lombok.SneakyThrows;
 
 /**
  * 原型模式是为了复制对象
@@ -112,8 +111,11 @@ class 人族飞行兵 extends 飞行兵 {
 }
 
 abstract class 原型接口<T> implements Cloneable {
-    @SneakyThrows
     public T 复制() {
-        return (T) super.clone();
+        try {
+            return (T) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
