@@ -13,6 +13,7 @@
         <module>builder</module>
         <module>prototype</module>
         <module>adapter</module>
+        <module>decorator</module>
     </modules>
     <packaging>pom</packaging>
 
