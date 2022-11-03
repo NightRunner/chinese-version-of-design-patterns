@@ -1,5 +1,8 @@
-package 个人.夜行者;
+package person.nightrunner;
 
+/**
+ * 大众不光会套娃,一个车型还套两次!!!!
+ */
 public class 抽象工厂主程序_汽车 {
     public static void main(String[] args) {
         汽车工厂 工厂 = new 一汽大众汽车工厂();

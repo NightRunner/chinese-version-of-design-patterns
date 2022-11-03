@@ -1,4 +1,4 @@
-package 个人.夜行者;
+package person.nightrunner;
 
 public enum 汽车类型 {
     SUV,

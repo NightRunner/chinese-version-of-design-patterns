@@ -1,9 +1,10 @@
 package person.nightrunner;
 
 /**
+ * 哥自己来创造英雄!!
  * 用于constructor的"反范式",因为范式型constructor的参数过多,例如本例需要7个参数,后续还有可能增加更多参数,使用构造器这种方式只需要增加代码,不需要修改原有代码
  */
-public class 构造器主程序 {
+public class 构造器模式主程序 {
     public static void main(String[] args) {
         角色 角色 = new 角色.构造器(职业.亚马逊, "射射射")
                 .设置发型(发型.长马尾)

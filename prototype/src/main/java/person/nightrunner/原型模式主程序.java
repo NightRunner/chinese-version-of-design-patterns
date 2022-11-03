@@ -2,7 +2,7 @@ package person.nightrunner;
 
 
 /**
- * 原型模式是为了复制对象
+ * 根据原型创建狮鹫!!!
  */
 public class 原型模式主程序 {
     public static void main(String[] args) {

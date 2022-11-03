@@ -1,7 +1,10 @@
-package 个人.夜行者.工厂方法;
+package person.nightrunner.工厂方法;
 
-import 个人.夜行者.汽车类型;
+import person.nightrunner.汽车类型;
 
+/**
+ * 要啥,我俩都能生产
+ */
 public class 工厂方法主程序 {
     public static void main(String[] args) {
 

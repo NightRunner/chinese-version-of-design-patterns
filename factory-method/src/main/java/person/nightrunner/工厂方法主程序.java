@@ -1,4 +1,4 @@
-package 个人.夜行者;
+package person.nightrunner;
 
 public class 工厂方法主程序 {
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
 package person.nightrunner;
 
 /**
- *
+ * 老司机需要适配才能骑自行车!
  */
 public class 适配器模式主程序 {
     public static void main(String[] args) {

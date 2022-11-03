@@ -1,8 +1,11 @@
-package 个人.夜行者;
+package person.nightrunner;
 
 import java.util.Scanner;
 
-public class 抽象工厂主程序_魔兽争霸 {
+/**
+ * 魔兽四个种族其实都一个套路!看我抽象工厂如何优雅实现
+ */
+public class 抽象工厂模式主程序_魔兽争霸 {
     public static void main(String[] args) {
         do {
             Scanner sc = new Scanner(System.in);
@@ -36,10 +39,7 @@ public class 抽象工厂主程序_魔兽争霸 {
 }
 
 enum 种族枚举 {
-    人族(0, "人族"),
-    精灵(1, "精灵"),
-    兽族(2, "兽族"),
-    不死族(3, "不死族");
+    人族(0, "人族"), 精灵(1, "精灵"), 兽族(2, "兽族"), 不死族(3, "不死族");
 
     Integer 索引;
     String 名称;
