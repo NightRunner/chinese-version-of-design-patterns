@@ -10,7 +10,6 @@ public class 桥接模式主程序 {
     public static void main(String[] args) {
         List<Buff> buff们 = new ArrayList<>();
         buff们.add(new 嗜血术());
-        buff们.add(new 心灵之火());
         buff们.add(new 耐久光环());
 
         游戏单位 剑圣 = new 剑圣(buff们);
@@ -19,6 +18,60 @@ public class 桥接模式主程序 {
         剑圣.攻击();
         System.out.println();
         剑圣.死亡();
+        System.out.println();
+
+
+        buff们 = new ArrayList<>();
+        buff们.add(new 心灵之火());
+        恶魔猎手 恶魔猎手 = new 恶魔猎手(buff们);
+        恶魔猎手.移动();
+        System.out.println();
+        恶魔猎手.攻击();
+        System.out.println();
+        恶魔猎手.死亡();
+        System.out.println();
+    }
+}
+
+class 恶魔猎手 implements 游戏单位 {
+    public 恶魔猎手(List<Buff> buffs) {
+        this.buffs = buffs;
+    }
+
+    private List<Buff> buffs = new ArrayList<>();
+
+    @Override
+    public List<Buff> 获取Buff们() {
+        return buffs;
+    }
+
+    public 恶魔猎手(游戏单位 单位, List<Buff> buffs) {
+        this.buffs = buffs;
+    }
+
+    @Override
+    public void 移动() {
+        for (Buff buff : buffs) {
+            buff.激活();
+        }
+        System.out.println("恶魔猎手拿着双刀刀跑路呢");
+    }
+
+    @Override
+    public void 攻击() {
+        for (Buff buff : buffs) {
+            buff.生效();
+        }
+        System.out.println("恶魔猎手拿着双刀砍向敌人");
+    }
+
+
+    @Override
+    public void 死亡() {
+        System.out.println("恶魔猎手缓缓倒下");
+        for (Buff buff : buffs) {
+            buff.消失();
+        }
     }
 }
 
