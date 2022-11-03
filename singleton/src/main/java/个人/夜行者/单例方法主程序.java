@@ -1,105 +1,97 @@
 package 个人.夜行者;
 
-import java.util.UUID;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class 单例方法主程序 {
 
-    public static final int THREADS = 10;
+    public static final int 线程数 = 30;
 
     public static void main(String[] args) {
-        Runnable[] rs = new Runnable[THREADS];
-        ExecutorService executorService = Executors.newFixedThreadPool(10);
 
+        ExecutorService executorService = Executors.newFixedThreadPool(线程数 * 5);
         System.out.println("预加载模式");
-        for (int i = 0; i < THREADS; i++) {
-            rs[i] = () -> {
+        for (int i = 0; i < 线程数; i++) {
+            executorService.execute(() -> {
                 我的专车_预加载模式 我的专车 = 我的专车_预加载模式.获取我的专车();
-                System.out.println("我的专车 = " + 我的专车.获取名称());
-            };
-        }
-        for (int i = 0; i < rs.length; i++) {
-            executorService.execute(rs[i]);
+                计数(我的专车_预加载模式.class, 我的专车);
+            });
         }
 
         System.out.println("懒加载");
-        for (int i = 0; i < THREADS; i++) {
-            rs[i] = new Runnable() {
-                public void run() {
-                    我的专车_懒加载模式 我的专车 = 我的专车_懒加载模式.获取我的专车();
-                    System.out.println("我的专车 = " + 我的专车.获取名称());
-                }
-            };
-        }
-        for (int i = 0; i < rs.length; i++) {
-            executorService.execute(rs[i]);
+        for (int i = 0; i < 线程数; i++) {
+            executorService.execute(() -> {
+                我的专车_懒加载模式 我的专车 = 我的专车_懒加载模式.获取我的专车();
+                计数(我的专车_懒加载模式.class, 我的专车);
+            });
         }
 
         System.out.println("双重校验加载");
-        for (int i = 0; i < THREADS; i++) {
-            rs[i] = new Runnable() {
-                public void run() {
-                    我的专车_双重校验懒加载模式 我的专车 = 我的专车_双重校验懒加载模式.获取我的专车();
-                    System.out.println("我的专车 = " + 我的专车.获取名称());
-                }
-            };
-        }
-        for (int i = 0; i < rs.length; i++) {
-            executorService.execute(rs[i]);
+        for (int i = 0; i < 线程数; i++) {
+            executorService.execute(() -> {
+                我的专车_双重校验懒加载模式 我的专车 = 我的专车_双重校验懒加载模式.获取我的专车();
+                计数(我的专车_双重校验懒加载模式.class, 我的专车);
+            });
         }
 
         System.out.println("线程安全加载");
-        for (int i = 0; i < THREADS; i++) {
-            rs[i] = new Runnable() {
-                public void run() {
-                    我的专车_线程安全懒加载模式 我的专车 = 我的专车_线程安全懒加载模式.获取我的专车();
-                    System.out.println("我的专车 = " + 我的专车.获取名称());
-                }
-            };
+        for (int i = 0; i < 线程数; i++) {
+            executorService.execute(() -> {
+                我的专车_线程安全懒加载模式 我的专车 = 我的专车_线程安全懒加载模式.获取我的专车();
+                计数(我的专车_线程安全懒加载模式.class, 我的专车);
+            });
         }
-        for (int i = 0; i < rs.length; i++) {
-            executorService.execute(rs[i]);
-        }
-
 
         System.out.println("持有者懒加载");
-        for (int i = 0; i < THREADS; i++) {
-            rs[i] = new Runnable() {
-                public void run() {
-                    我的专车_线程安全懒加载持有者模式 我的专车 = 我的专车_线程安全懒加载持有者模式.获取我的专车();
-                    System.out.println("我的专车 = " + 我的专车.获取名称());
-                }
-            };
-        }
-        for (int i = 0; i < rs.length; i++) {
-            executorService.submit(rs[i]);
+        for (int i = 0; i < 线程数; i++) {
+            executorService.execute(() -> {
+                我的专车_线程安全懒加载持有者模式 我的专车 = 我的专车_线程安全懒加载持有者模式.获取我的专车();
+                计数(我的专车_线程安全懒加载持有者模式.class, 我的专车);
+            });
         }
 
         executorService.shutdown();
 
-        while (Thread.activeCount() > 2) {
+        while (true) {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            System.out.println(Thread.activeCount());
+            if (Thread.activeCount() <= 2) {
+                map.forEach((a, b) -> {
+                    System.out.printf("%s加载了%s个不同的对象\n", a, b.size());
+                });
+                break;
+            }
         }
-
     }
+
+    private static void 计数(Class 类名, 我的专车父类 我的专车) {
+        Set<String> set = map.getOrDefault(类名.getName(), new HashSet<>());
+        set.add(我的专车.获取唯一ID());
+        map.put(类名.getName(), set);
+    }
+
+    static Map<String, Set<String>> map = new ConcurrentHashMap<>();
 }
 
 class 我的专车父类 {
 
-    String uuid;
+    String 唯一ID;
 
     public String 获取名称() {
-        return "这是夜行者的专车" + this.getClass().getName() + ":" + uuid;
+        return "这是夜行者的专车" + this.getClass().getName() + ":" + 唯一ID;
+    }
+
+    public String 获取唯一ID() {
+        return 唯一ID;
     }
 
     public 我的专车父类() {
-        this.uuid = UUID.randomUUID().toString();
+        this.唯一ID = UUID.randomUUID().toString();
     }
 }
 
@@ -196,7 +188,7 @@ class 我的专车_线程安全懒加载模式 extends 我的专车父类 {
 class 我的专车_线程安全懒加载持有者模式 extends 我的专车父类 {
 
     public String 获取名称() {
-        return "这是夜行者的专车" + this.getClass().getName() + ":" + uuid;
+        return "这是夜行者的专车" + this.getClass().getName() + ":" + 唯一ID;
     }
 
     private 我的专车_线程安全懒加载持有者模式() {
