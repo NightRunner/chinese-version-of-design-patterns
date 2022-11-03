@@ -53,7 +53,7 @@ class 心灵之火狮鹫 implements 狮鹫接口 {
 
     @Override
     public Double 获取护甲值() {
-        return 狮鹫.获取护甲值() * 1.1;
+        return 狮鹫.获取护甲值() + 5;
     }
 
     @Override
