@@ -63,55 +63,15 @@ class 魔兽容器代理类 implements InvocationHandler {
             for (Class<?> anInterface : interfaces) {
                 boolean 是容器 = anInterface.getName().equals(魔兽容器接口.class.getName());
                 if (是容器) {
-                    Method[] methods = 被代理对象.getClass().getMethods();
-
-                    Integer 最大容量 = null;
-                    for (Method tempMethod : methods) {
-                        if (tempMethod.getName().equals("获取最大容量")) {
-                            最大容量 = (Integer) tempMethod.invoke(被代理对象);
-                            break;
-                        }
-                    }
-
-                    List 单位们 = null;
-                    for (Method tempMethod : methods) {
-                        if (tempMethod.getName().equals("获取单位们")) {
-                            单位们 = (List) tempMethod.invoke(被代理对象);
-                            break;
-                        }
-                    }
-
-                    Integer 单位们总计体积 = 0;
-                    for (Object 单位 : 单位们) {
-                        if (!(单位 instanceof 魔兽单位接口)) {
-                            continue;
-                        }
-                        魔兽单位接口 魔兽单位接口 = (魔兽单位接口) 单位;
-                        单位们总计体积 += 魔兽单位接口.获取单位体积();
-                    }
-
-                    Integer 本次加入单位体积 = 0;
-                    for (Object 单位 : args) {
-                        if (!(单位 instanceof 魔兽单位接口)) {
-                            continue;
-                        }
-                        魔兽单位接口 魔兽单位接口 = (魔兽单位接口) 单位;
-                        本次加入单位体积 += 魔兽单位接口.获取单位体积();
-                    }
-
-                    if (最大容量 != null && 单位们 != null) {
-                        if (单位们总计体积 + 本次加入单位体积 >= 最大容量) {
-                            System.out.println("已经达到最大容量,别再进来了");
-                            return null;
-                        }
+                    if (!反射工具.看看能不能放下(被代理对象, args)) {
+                        System.out.println("已经达到最大容量,别再进来了");
+                        return null;
                     }
                     break;
                 }
             }
         }
-        Object invoke = method.invoke(被代理对象, args);
-        System.out.println("调用成功:" + method.getName());
-        return invoke;
+        return method.invoke(被代理对象, args);
     }
 
     public Object 获取代理对象() {

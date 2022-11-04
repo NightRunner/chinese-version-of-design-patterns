@@ -4,6 +4,7 @@ import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.List;
 
@@ -72,51 +73,19 @@ class CGLIB动态代理 implements MethodInterceptor {
     @Override
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
 
+//        System.out.println("增强开始~~~");
         if (method.getName().equals("放入一个单位")) {
-            List 单位们 = null;
-
-            Method[] methods = 被代理对象.getClass().getMethods();
-
-            Integer 最大容量 = null;
-            for (Method tempMethod : methods) {
-                if (tempMethod.getName().equals("获取最大容量")) {
-                    //这里只能用o,不能使用 "被代理对象"变量
-                    最大容量 = (Integer) tempMethod.invoke(o);
-                }
-                if (tempMethod.getName().equals("获取单位们")) {
-                    //这里只能用o,不能使用 "被代理对象"变量
-                    单位们 = (List) tempMethod.invoke(o);
-                }
-            }
-
-            Integer 单位们总计体积 = 0;
-            for (Object 单位 : 单位们) {
-                if (!(单位 instanceof 魔兽单位接口)) {
-                    continue;
-                }
-                魔兽单位接口 魔兽单位接口 = (魔兽单位接口) 单位;
-                单位们总计体积 += 魔兽单位接口.获取单位体积();
-            }
-
-            Integer 本次加入单位体积 = 0;
-            for (Object 单位 : objects) {
-                if (!(单位 instanceof 魔兽单位接口)) {
-                    continue;
-                }
-                魔兽单位接口 魔兽单位接口 = (魔兽单位接口) 单位;
-                本次加入单位体积 += 魔兽单位接口.获取单位体积();
-            }
-
-            if (单位们总计体积 + 本次加入单位体积 > 最大容量) {
+            if (!反射工具.看看能不能放下(o, objects)) {
                 System.out.println("已经达到最大容量,别再进来了");
                 return null;
             }
         }
 
-//        System.out.println("增强开始~~~");
+
         Object result = methodProxy.invokeSuper(o, objects);
 //        System.out.println("增强结束~~~");
         return result;
     }
+
 
 }
