@@ -57,7 +57,7 @@ class 魔兽容器代理类 implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("开始动态调用:" + method.getName());
+        System.out.println("进入动态代理调用:" + method.getName());
         Class<?>[] interfaces = proxy.getClass().getInterfaces();
         if (method.getName().equals("放入一个单位")) {
             for (Class<?> anInterface : interfaces) {
@@ -81,8 +81,26 @@ class 魔兽容器代理类 implements InvocationHandler {
                         }
                     }
 
+                    Integer 单位们总计体积 = 0;
+                    for (Object 单位 : 单位们) {
+                        if (!(单位 instanceof 魔兽单位接口)) {
+                            continue;
+                        }
+                        魔兽单位接口 魔兽单位接口 = (魔兽单位接口) 单位;
+                        单位们总计体积 += 魔兽单位接口.获取单位体积();
+                    }
+
+                    Integer 本次加入单位体积 = 0;
+                    for (Object 单位 : args) {
+                        if (!(单位 instanceof 魔兽单位接口)) {
+                            continue;
+                        }
+                        魔兽单位接口 魔兽单位接口 = (魔兽单位接口) 单位;
+                        本次加入单位体积 += 魔兽单位接口.获取单位体积();
+                    }
+
                     if (最大容量 != null && 单位们 != null) {
-                        if (单位们.size() >= 最大容量) {
+                        if (单位们总计体积 + 本次加入单位体积 >= 最大容量) {
                             System.out.println("已经达到最大容量,别再进来了");
                             return null;
                         }

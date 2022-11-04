@@ -10,6 +10,7 @@ class 兽族地洞 implements 魔兽容器接口<兽族苦工> {
     @Override
     public void 放入一个单位(兽族苦工 兽族苦工) {
         苦工们.add(兽族苦工);
+        System.out.println("成功放入一个单位");
     }
 
     @Override

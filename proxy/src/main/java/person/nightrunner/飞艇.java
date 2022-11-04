@@ -10,6 +10,7 @@ class 飞艇 implements 魔兽容器接口<魔兽单位接口> {
     @Override
     public void 放入一个单位(魔兽单位接口 兽族苦工) {
         魔兽单位们.add(兽族苦工);
+        System.out.println("成功放入一个单位");
     }
 
     @Override
