@@ -3,7 +3,7 @@ package person.nightrunner;
 import java.util.ArrayList;
 import java.util.List;
 
-class 飞艇 implements 魔兽容器接口<魔兽单位接口> {
+class 地精飞艇 implements 魔兽容器接口<魔兽单位接口> {
 
     List<魔兽单位接口> 魔兽单位们 = new ArrayList<>();
 
