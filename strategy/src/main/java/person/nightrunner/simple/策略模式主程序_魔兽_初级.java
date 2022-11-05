@@ -1,9 +1,9 @@
-package person.nightrunner.complex.person.nightrunner;
+package person.nightrunner.simple;
 
 /**
  * 恶魔猎手有多重攻击策略,当然这取决与是否带了法球和是否变身
  */
-public class 策略模式主程序_魔兽_简单 {
+public class 策略模式主程序_魔兽_初级 {
     public static void main(String[] args) {
         恶魔猎手 恶魔猎手 = new 恶魔猎手();
         人族步兵 人族步兵 = new 人族步兵();
@@ -66,7 +66,7 @@ class 恶魔猎手 extends 魔兽兵种单位接口 {
 
 interface 攻击策略 {
     default void 攻击(魔兽兵种单位接口 攻击单位, 魔兽兵种单位接口 被攻击单位) {
-        System.out.printf("%s使用了%s攻击了%s%n", 攻击单位.getClass().getSimpleName(), this.getClass().getSimpleName(),
+        System.out.printf("[%s]使用了[%s]攻击了[%s]%n", 攻击单位.getClass().getSimpleName(), this.getClass().getSimpleName(),
                 被攻击单位.getClass().getSimpleName());
     }
 }
