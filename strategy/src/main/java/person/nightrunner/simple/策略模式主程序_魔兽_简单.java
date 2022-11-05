@@ -1,9 +1,12 @@
 package person.nightrunner.simple;
 
 /**
- * 恶魔猎手有多重攻击策略,当然这取决与是否带了法球和是否变身
+ * 伊利丹:你们这是自寻死路!!!
+ * you are not prepared!!!
+ * <p>
+ * PS:恶魔猎手有多重攻击策略,当然这取决与是否带了法球和是否变身
  */
-public class 策略模式主程序_魔兽_初级 {
+public class 策略模式主程序_魔兽_简单 {
     public static void main(String[] args) {
         恶魔猎手 恶魔猎手 = new 恶魔猎手();
         人族步兵 人族步兵 = new 人族步兵();
