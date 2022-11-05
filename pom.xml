@@ -22,6 +22,7 @@
         <module>strategy</module>
         <module>template-method</module>
         <module>observer</module>
+        <module>iterator</module>
     </modules>
     <packaging>pom</packaging>
 
