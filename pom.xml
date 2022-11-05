@@ -20,6 +20,7 @@
         <module>composite</module>
         <module>flyweight</module>
         <module>strategy</module>
+        <module>template-method</module>
     </modules>
     <packaging>pom</packaging>
 
