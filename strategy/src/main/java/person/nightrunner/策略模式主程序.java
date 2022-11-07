@@ -1,4 +1,4 @@
-package person.nightrunner.simple;
+package person.nightrunner;
 
 /**
  * 伊利丹:你们这是自寻死路!!!
