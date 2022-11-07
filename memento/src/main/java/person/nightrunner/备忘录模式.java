@@ -3,6 +3,7 @@ package person.nightrunner;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * 备忘录模式可以实现存档
@@ -18,12 +19,29 @@ public class 备忘录模式 {
         恶魔猎手.血量 = 10;
         恶魔猎手.蓝量 = 0;
         恶魔猎手.显示状态();
+        存档集合.add(恶魔猎手.获取存档());
 
         恶魔猎手.血量 = 0;
         恶魔猎手.蓝量 = 0;
         恶魔猎手.显示状态();
 
-        恶魔猎手.恢复存档(存档集合.stream().findFirst().get());
+        int 存档下标 = -1;
+        do {
+            Scanner sc = new Scanner(System.in);
+            for (int i = 0; i < 存档集合.size(); i++) {
+                System.out.println(i + ":" + 存档集合.get(i).摘要);
+            }
+            System.out.print("请输入要恢复存档的数字：");
+
+            int 下标 = 存档下标 = sc.nextInt();
+            if (下标 < 0 || 下标 > (存档集合.size() - 1)) {
+                System.out.println("输入错误,请重新输入");
+            } else {
+                break;
+            }
+        } while (true);
+
+        恶魔猎手.恢复存档(存档集合.get(存档下标));
         恶魔猎手.显示状态();
     }
 }
@@ -65,7 +83,7 @@ abstract class 角色默认抽象实现 implements 角色 {
         this.血量 = 存档.血量;
         this.蓝量 = 存档.蓝量;
         this.当前地点 = 存档.地点;
-        System.out.println(this.getClass().getSimpleName() + "恢复存档" + 存档);
+        System.out.println(this.getClass().getSimpleName() + "恢复存档:" + 存档);
     }
 
     @Override
