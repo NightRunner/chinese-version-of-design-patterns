@@ -33,10 +33,10 @@
 ### [迭代器模式(iterator)](iterator/src/main/java/person/nightrunner/迭代器模式主程序.java)
 ### [责任链模式(chain-of-responsibility)](chain-of-responsibility/src/main/java/person/nightrunner/责任链模式主程序.java)
 ### [命令模式(command)](command/src/main/java/person/nightrunner/命令模式主程序.java)
-### [备忘录模式(memento)](adapter/src/main/java/person/nightrunner/备忘录模式主程序.java)
+### [备忘录模式(memento)](memento/src/main/java/person/nightrunner/备忘录模式主程序.java)
 ### [状态模式(state)](state/src/main/java/person/nightrunner/状态模式主程序.java)
 ### [访问者模式(visitor)](visitor/src/main/java/person/nightrunner/访问者模式主程序.java)
-### [中介者模式(mediator)](mediator/src/main/java/person/nightrunner/中介模式主程序.java)
+### [中介模式(mediator)](mediator/src/main/java/person/nightrunner/中介模式主程序.java)
 ### [解释器模式(interpreter)](interpreter/src/main/java/person/nightrunner/解释器模式主程序.java)
 
 ## PS
