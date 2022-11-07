@@ -3,7 +3,7 @@ package person.nightrunner;
 /**
  * 看起来简单,实际很复杂!
  */
-public class 外观模式 {
+public class 外观模式主程序 {
     public static void main(String[] args) {
         英雄外观 英雄 = new 英雄外观(new 山丘之王());
         英雄.放技能();
