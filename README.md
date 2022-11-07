@@ -10,13 +10,13 @@
 
 # 传送门
 ## 创建型
-### [简单工厂模式(factory)](factory/src/main/java/person/nightrunner/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E4%B8%BB%E7%A8%8B%E5%BA%8F.java)
-### [工厂方法模式(factory-method)](factory-method/src/main/java/person/nightrunner/%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E4%B8%BB%E7%A8%8B%E5%BA%8F.java)
-### [抽象工厂模式(abstract-factory)](abstract-factory/src/main/java/person/nightrunner/%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%E4%B8%BB%E7%A8%8B%E5%BA%8F_%E9%AD%94%E5%85%BD%E4%BA%89%E9%9C%B8.java)
-### [单例模式(singleton)](singleton/src/main/java/person/nightrunner/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F%E4%B8%BB%E7%A8%8B%E5%BA%8F.java)
-### [原型模式(prototype)](prototype/src/main/java/person/nightrunner/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F%E4%B8%BB%E7%A8%8B%E5%BA%8F.java)
-### [构造器模式(builder)](builder/src/main/java/person/nightrunner/%E6%9E%84%E9%80%A0%E5%99%A8%E6%A8%A1%E5%BC%8F%E4%B8%BB%E7%A8%8B%E5%BA%8F.java)
-### [享元模式(flyweight)](flyweight/src/main/java/person/nightrunner/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F%E4%B8%BB%E7%A8%8B%E5%BA%8F.java)
+### [简单工厂模式(factory)](factory/src/main/java/person/nightrunner/构造器模式主程序.java)
+### [工厂方法模式(factory-method)](factory-method/src/main/java/person/nightrunner/工厂方法模式主程序.java)
+### [抽象工厂模式(abstract-factory)](abstract-factory/src/main/java/person/nightrunner/抽象工厂模式主程序.java)
+### [单例模式(singleton)](singleton/src/main/java/person/nightrunner/单例模式主程序.java)
+### [原型模式(prototype)](prototype/src/main/java/person/nightrunner/原型模式主程序.java)
+### [构造器模式(builder)](builder/src/main/java/person/nightrunner/构造器模式主程序.java)
+### [享元模式(flyweight)](flyweight/src/main/java/person/nightrunner/享元模式主程序.java)
 
 ## 结构型
 ### [适配器模式(adapter)](adapter/src/main/java/person/nightrunner/适配器模式主程序.java)
@@ -25,7 +25,6 @@
 ### [外观模式(facade)](facade/src/main/java/person/nightrunner/外观模式主程序.java)
 ### [桥接模式(bridge)](bridge/src/main/java/person/nightrunner/桥接模式主程序.java)
 ### [组合模式(composite)](composite/src/main/java/person/nightrunner/组合模式主程序.java)
-### [享元模式(flyweight)](flyweight/src/main/java/person/nightrunner/享元模式主程序.java)
 
 ## 行为型
 ### [策略模式(strategy)](strategy/src/main/java/person/nightrunner/策略模式主程序.java)
