@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 中介者模式可以实现光环效果!!!
  */
-public class 中介者模式主程序 {
+public class 中介模式主程序 {
     public static void main(String[] args) {
         白牛 白牛 = new 白牛();
         大法师 大法师 = new 大法师();
