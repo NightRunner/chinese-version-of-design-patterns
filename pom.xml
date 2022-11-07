@@ -29,6 +29,7 @@
         <module>state</module>
         <module>visitor</module>
         <module>mediator</module>
+        <module>interpreter</module>
     </modules>
     <packaging>pom</packaging>
 
