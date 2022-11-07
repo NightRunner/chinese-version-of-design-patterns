@@ -10,7 +10,7 @@
 
 # 传送门
 ## 创建型
-### [简单工厂模式(factory)](factory/src/main/java/person/nightrunner/构造器模式主程序.java)
+### [简单工厂模式(factory)](factory/src/main/java/person/nightrunner/简单工厂模式主程序.java)
 ### [工厂方法模式(factory-method)](factory-method/src/main/java/person/nightrunner/工厂方法模式主程序.java)
 ### [抽象工厂模式(abstract-factory)](abstract-factory/src/main/java/person/nightrunner/抽象工厂模式主程序.java)
 ### [单例模式(singleton)](singleton/src/main/java/person/nightrunner/单例模式主程序.java)
