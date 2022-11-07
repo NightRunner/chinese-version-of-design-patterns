@@ -2,8 +2,6 @@ package person.nightrunner.simple;
 
 import person.nightrunner.指令;
 
-import java.util.Stack;
-
 /**
  * 用遥控器执行开空调,关空调命令!!!
  */
@@ -18,11 +16,9 @@ public class 命令模式主程序_简单 {
 }
 
 class 遥控器 {
-
     public void 执行命令(指令 指令) {
         指令.执行();
     }
-
 }
 
 class 空调 {
