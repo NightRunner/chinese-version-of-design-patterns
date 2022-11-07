@@ -1,11 +1,9 @@
-package person.nightrunner.简单工厂;
-
-import person.nightrunner.汽车类型;
+package person.nightrunner;
 
 /**
  * 想要啥?告诉哥,哥给你生产
  */
-public class 简单工厂主程序 {
+public class 简单工厂模式主程序 {
     public static void main(String[] args) {
         汽车 汽车 = new 汽车工厂().创建(汽车类型.SUV);
         System.out.println("汽车.获取名称() = " + 汽车.获取名称());

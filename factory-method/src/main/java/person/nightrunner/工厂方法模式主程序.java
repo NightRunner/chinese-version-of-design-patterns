@@ -1,6 +1,6 @@
 package person.nightrunner;
 
-public class 工厂方法主程序 {
+public class 工厂方法模式主程序 {
     public static void main(String[] args) {
 
         汽车工厂 汽车工厂 = new 一汽大众工厂();
