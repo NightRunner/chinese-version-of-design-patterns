@@ -26,6 +26,7 @@
         <module>chain-of-responsibility</module>
         <module>command</module>
         <module>memento</module>
+        <module>state</module>
     </modules>
     <packaging>pom</packaging>
 
