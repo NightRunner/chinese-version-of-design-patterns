@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * 魔兽四个种族其实都一个套路!看我抽象工厂如何优雅实现
  */
-public class 抽象工厂模式主程序_魔兽争霸 {
+public class 抽象工厂模式主程序 {
     public static void main(String[] args) {
         do {
             Scanner sc = new Scanner(System.in);
@@ -16,9 +16,9 @@ public class 抽象工厂模式主程序_魔兽争霸 {
             int 索引 = sc.nextInt();
             种族枚举 种族 = 种族枚举.通过索引获取种族(索引);
             建筑工厂 工厂实例 = 获取建筑工厂(种族);
-            System.out.println("工厂实例.创建兵营().获取名称() = " + 工厂实例.创建兵营().获取名称());
-            System.out.println("工厂实例.创建祭坛().获取名称() = " + 工厂实例.创建祭坛().获取名称());
-            System.out.println("工厂实例.创建商店().获取名称() = " + 工厂实例.创建商店().获取名称());
+            System.out.println("工厂实例.创建兵营() = " + 工厂实例.创建兵营().getClass().getSimpleName());
+            System.out.println("工厂实例.创建祭坛() = " + 工厂实例.创建祭坛().getClass().getSimpleName());
+            System.out.println("工厂实例.创建商店() = " + 工厂实例.创建商店().getClass().getSimpleName());
         } while (true);
     }
 
@@ -139,97 +139,46 @@ interface 建筑工厂 {
 }
 
 interface 祭坛 {
-    String 获取名称();
 }
 
 interface 兵营 {
-    String 获取名称();
 }
 
 interface 商店 {
-    String 获取名称();
 }
 
 class 人族祭坛 implements 祭坛 {
-    @Override
-    public String 获取名称() {
-        return "人族祭坛";
-    }
 }
 
 class 兽族祭坛 implements 祭坛 {
-    @Override
-    public String 获取名称() {
-        return "兽族祭坛";
-    }
 }
 
 class 不死族祭坛 implements 祭坛 {
-    @Override
-    public String 获取名称() {
-        return "不死族祭坛";
-    }
 }
 
 class 精灵祭坛 implements 祭坛 {
-    @Override
-    public String 获取名称() {
-        return "精灵祭坛";
-    }
 }
 
 class 人族兵营 implements 兵营 {
-    @Override
-    public String 获取名称() {
-        return "人族兵营";
-    }
 }
 
 class 精灵兵营 implements 兵营 {
-    @Override
-    public String 获取名称() {
-        return "精灵兵营";
-    }
 }
 
 class 不死族兵营 implements 兵营 {
-    @Override
-    public String 获取名称() {
-        return "不死族兵营";
-    }
 }
 
 class 兽族兵营 implements 兵营 {
-    @Override
-    public String 获取名称() {
-        return "兽族兵营";
-    }
 }
 
 class 不死族商店 implements 商店 {
-    @Override
-    public String 获取名称() {
-        return "不死族商店";
-    }
 }
 
 class 精灵商店 implements 商店 {
-    @Override
-    public String 获取名称() {
-        return "精灵商店";
-    }
 }
 
 class 人族商店 implements 商店 {
-    @Override
-    public String 获取名称() {
-        return "人族商店";
-    }
 }
 
 class 兽族商店 implements 商店 {
-    @Override
-    public String 获取名称() {
-        return "兽族商店";
-    }
 }
