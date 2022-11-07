@@ -30,7 +30,7 @@
 ### [策略模式(strategy)](strategy/src/main/java/person/nightrunner/策略模式主程序.java)
 ### [模板方法模式(template-method)](template-method/src/main/java/person/nightrunner/模板方法模式主程序.java)
 ### [观察者模式(observer)](observer/src/main/java/person/nightrunner/观察者模式主程序.java)
-### [迭代器模式(iterator)](iterator/src/main/java/person/nightrunner/代理模式主程序.java)
+### [迭代器模式(iterator)](iterator/src/main/java/person/nightrunner/迭代器模式主程序.java)
 ### [责任链模式(chain-of-responsibility)](chain-of-responsibility/src/main/java/person/nightrunner/责任链模式主程序.java)
 ### [命令模式(command)](command/src/main/java/person/nightrunner/命令模式主程序.java)
 ### [备忘录模式(memento)](adapter/src/main/java/person/nightrunner/备忘录模式主程序.java)
