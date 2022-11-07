@@ -16,25 +16,25 @@
 
 ## 结构型
 ### [适配器模式(adapter)](adapter/src/main/java/person/nightrunner)
-### [装饰器模式(decorator)](adapter/src/main/java/person/nightrunner)
-### [代理模式(proxy)](adapter/src/main/java/person/nightrunner)
-### [外观模式(facade)](adapter/src/main/java/person/nightrunner)
-### [桥接模式(bridge)](adapter/src/main/java/person/nightrunner)
-### [组合模式(composite)](adapter/src/main/java/person/nightrunner)
-### [享元模式(flyweight)](adapter/src/main/java/person/nightrunner)
+### [装饰器模式(decorator)](decorator/src/main/java/person/nightrunner)
+### [代理模式(proxy)](proxy/src/main/java/person/nightrunner)
+### [外观模式(facade)](facade/src/main/java/person/nightrunner)
+### [桥接模式(bridge)](bridge/src/main/java/person/nightrunner)
+### [组合模式(composite)](composite/src/main/java/person/nightrunner)
+### [享元模式(flyweight)](flyweight/src/main/java/person/nightrunner)
 
 ## 行为型
-### [策略模式(strategy)](adapter/src/main/java/person/nightrunner)
-### [模板方法模式(template-method)](adapter/src/main/java/person/nightrunner)
-### [观察者模式(observer)](adapter/src/main/java/person/nightrunner)
-### [迭代模式(iterator)](adapter/src/main/java/person/nightrunner)
-### [责任链模式(chain-of-responsibility)](adapter/src/main/java/person/nightrunner)
-### [命令模式(command)](adapter/src/main/java/person/nightrunner)
+### [策略模式(strategy)](strategy/src/main/java/person/nightrunner)
+### [模板方法模式(template-method)](template-method/src/main/java/person/nightrunner)
+### [观察者模式(observer)](observer/src/main/java/person/nightrunner)
+### [迭代模式(iterator)](iterator/src/main/java/person/nightrunner)
+### [责任链模式(chain-of-responsibility)](chain-of-responsibility/src/main/java/person/nightrunner)
+### [命令模式(command)](command/src/main/java/person/nightrunner)
 ### [备忘录模式(memento)](adapter/src/main/java/person/nightrunner)
-### [状态模式(factory)](adapter/src/main/java/person/nightrunner)
-### [访问者模式(visitor)](adapter/src/main/java/person/nightrunner)
-### [中介者模式(mediator)](adapter/src/main/java/person/nightrunner)
-### [解释器模式(interpreter)](myLib/chinese-version-of-design-patterns/blob/master/adapter/src/main/java/person/nightrunner)
+### [状态模式(state)](state/src/main/java/person/nightrunner)
+### [访问者模式(visitor)](visitor/src/main/java/person/nightrunner)
+### [中介者模式(mediator)](mediator/src/main/java/person/nightrunner)
+### [解释器模式(interpreter)](interpreter/src/main/java/person/nightrunner)
 
 思路以
 https://github.com/iluwatar/java-design-patterns  
