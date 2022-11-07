@@ -1,4 +1,4 @@
-package org.nightrunner;
+package person.nightrunner;
 
 import java.util.ArrayList;
 import java.util.List;

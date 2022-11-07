@@ -1,9 +1,9 @@
-package person.nightrunner.simple;
+package person.nightrunner;
 
 /**
  * 恶魔猎手在不同状态下攻击方式不同
  */
-public class 状态模式主程序_魔兽_简单 {
+public class 状态模式主程序 {
     public static void main(String[] args) {
         恶魔猎手 恶魔猎手 = new 恶魔猎手();
         恶魔猎手.攻击();

@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * 备忘录模式可以实现存档
  */
-public class 备忘录模式 {
+public class 备忘录模式主程序 {
     public static void main(String[] args) {
         List<存档> 存档集合 = new ArrayList<>();
         恶魔猎手 恶魔猎手 = new 恶魔猎手("伊利丹");

@@ -1,11 +1,9 @@
-package person.nightrunner.simple;
-
-import person.nightrunner.指令;
+package person.nightrunner;
 
 /**
  * 用遥控器执行开空调,关空调命令!!!
  */
-public class 命令模式主程序_简单 {
+public class 命令模式主程序 {
     public static void main(String[] args) {
         空调 空调 = new 空调("格力立式空调");
         遥控器 遥控器 = new 遥控器();
@@ -62,7 +60,7 @@ abstract class 空调指令 implements 指令 {
 
 class 开 extends 空调指令 {
 
-    public 开(person.nightrunner.simple.空调 空调) {
+    public 开(person.nightrunner.空调 空调) {
         super(空调);
     }
 

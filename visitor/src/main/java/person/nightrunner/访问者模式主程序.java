@@ -1,9 +1,10 @@
 package person.nightrunner;
 
 /**
- * 访问者可以统计魔兽所有单位!!!
+ * 访问者可以统计魔兽大部分单位!!!
+ * PS:欢迎补充!
  */
-public class 访问者模式 {
+public class 访问者模式主程序 {
     public static void main(String[] args) {
         种族[] 种族 = new 种族[]{
                 获取人族所有单位(),

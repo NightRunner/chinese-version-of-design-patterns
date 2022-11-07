@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * dota中的"-swap","-rd",'-random'等指令就可以这样实现
  */
-public class 解释器主程序_魔兽DOTA {
+public class 解释器模式主程序 {
     public static void main(String[] args) {
         while (true) {
             System.out.println("你可以输入如下命令后回车:");
