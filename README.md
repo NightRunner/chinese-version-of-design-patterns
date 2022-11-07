@@ -15,8 +15,8 @@
 ### [享元模式(flyweight)](flyweight/src/main/java/person/nightrunner/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F%E4%B8%BB%E7%A8%8B%E5%BA%8F.java)
 
 ## 结构型
-### [适配器模式(adapter)](adapter/src/main/java/person/nightrunner)
-### [装饰器模式(decorator)](decorator/src/main/java/person/nightrunner)
+### [适配器模式(adapter)](adapter/src/main/java/person/nightrunner/适配器模式主程序.java)
+### [装饰器模式(decorator)](decorator/src/main/java/person/nightrunner/装饰器模式主程序.java)
 ### [代理模式(proxy)](proxy/src/main/java/person/nightrunner)
 ### [外观模式(facade)](facade/src/main/java/person/nightrunner)
 ### [桥接模式(bridge)](bridge/src/main/java/person/nightrunner)
