@@ -28,6 +28,7 @@
         <module>memento</module>
         <module>state</module>
         <module>visitor</module>
+        <module>mediator</module>
     </modules>
     <packaging>pom</packaging>
 
