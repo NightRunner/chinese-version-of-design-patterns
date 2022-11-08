@@ -6,7 +6,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * 我穷,只有这一辆车啊!
+ * 只有这一辆车啊!
  */
 public class 单例模式主程序 {
 

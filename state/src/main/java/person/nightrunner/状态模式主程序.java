@@ -111,7 +111,6 @@ class 大恶魔状态 extends 状态默认实现 {
     public void 攻击(魔兽作战单位 单位) {
         System.out.println(单位 + "在大恶魔状态发动了远程混乱攻击!!!绿色的火球划过天际,砸向目标,目标受到混乱伤害,周边的地方单位也受到了波及!!");
     }
-
 }
 
 class 恶魔猎手 extends 魔兽作战单位抽象实现 implements 魔兽作战单位 {
@@ -123,5 +122,4 @@ class 恶魔猎手 extends 魔兽作战单位抽象实现 implements 魔兽作�
     public void 恢复普通状态() {
         this.变更状态(new 普通状态());
     }
-
 }
