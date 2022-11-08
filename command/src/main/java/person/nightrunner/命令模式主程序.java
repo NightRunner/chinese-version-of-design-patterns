@@ -13,6 +13,10 @@ public class 命令模式主程序 {
     }
 }
 
+interface 指令 {
+    void 执行();
+}
+
 class 遥控器 {
     public void 执行命令(指令 指令) {
         指令.执行();

@@ -187,6 +187,3 @@ class 心灵之火 implements Buff {
         System.out.println("单位攻击力和护甲增加");
     }
 }
-
-
-
