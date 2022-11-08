@@ -91,7 +91,6 @@ interface 药剂 {
 }
 
 class 大蓝瓶 implements 药剂 {
-
     @Override
     public void 喝() {
         System.out.println("你的蓝量增加了很多,药剂ID:" + 获取唯一ID());
@@ -99,7 +98,6 @@ class 大蓝瓶 implements 药剂 {
 }
 
 class 大血瓶 implements 药剂 {
-
     @Override
     public void 喝() {
         System.out.println("你血量增加了很多,药剂ID:" + 获取唯一ID());
@@ -107,7 +105,6 @@ class 大血瓶 implements 药剂 {
 }
 
 class 小血瓶 implements 药剂 {
-
     @Override
     public void 喝() {
         System.out.println("你血量增加了少许,药剂ID:" + 获取唯一ID());
@@ -115,7 +112,6 @@ class 小血瓶 implements 药剂 {
 }
 
 class 小蓝瓶 implements 药剂 {
-
     @Override
     public void 喝() {
         System.out.println("你蓝量增加了少许,药剂ID:" + 获取唯一ID());
