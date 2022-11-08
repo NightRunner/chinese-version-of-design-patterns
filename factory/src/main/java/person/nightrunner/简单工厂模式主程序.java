@@ -5,8 +5,8 @@ package person.nightrunner;
  */
 public class 简单工厂模式主程序 {
     public static void main(String[] args) {
-        System.out.println("兵种 = " + getName(汽车工厂.创建(兵种类型.弓箭手)));
-        System.out.println("兵种 = " + getName(汽车工厂.创建(兵种类型.女猎手)));
+        System.out.println("兵种 = " + getName(暗夜兵营.创建(兵种类型.弓箭手)));
+        System.out.println("兵种 = " + getName(暗夜兵营.创建(兵种类型.女猎手)));
     }
 
     private static String getName(Object 对象) {
@@ -19,7 +19,7 @@ enum 兵种类型 {
     女猎手
 }
 
-class 汽车工厂 {
+class 暗夜兵营 {
 
     public static 兵种 创建(兵种类型 兵种类型) {
         if (兵种类型.弓箭手.equals(兵种类型)) {
@@ -37,7 +37,6 @@ interface 兵种 {
 
 class 弓箭手 implements 兵种 {
 }
-
 
 class 女猎手 implements 兵种 {
 }
