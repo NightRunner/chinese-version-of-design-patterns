@@ -4,7 +4,7 @@
 
     <groupId>person.nightrunner</groupId>
     <artifactId>design-patterns-chinese</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <modules>
         <module>factory</module>
         <module>abstract-factory</module>

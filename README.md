@@ -9,6 +9,14 @@
 #### PS:目前正在找工作(Java后端or大数据),欢迎来撩,邮箱690732060@qq.com
 
 # 传送门
+## 结构型
+### [适配器模式(adapter)](adapter/src/main/java/person/nightrunner/适配器模式主程序.java)
+### [装饰器模式(decorator)](decorator/src/main/java/person/nightrunner/装饰器模式主程序.java)
+### [代理模式(proxy)](proxy/src/main/java/person/nightrunner/静态代理模式主程序.java)--PS:动态代理([JDK](proxy/src/main/java/person/nightrunner/动态代理模式主程序_JDK.java),[Cglib](proxy/src/main/java/person/nightrunner/动态代理模式主程序_CGLIB.java))
+### [外观模式(facade)](facade/src/main/java/person/nightrunner/外观模式主程序.java)
+### [桥接模式(bridge)](bridge/src/main/java/person/nightrunner/桥接模式主程序.java)
+### [组合模式(composite)](composite/src/main/java/person/nightrunner/组合模式主程序.java)
+
 ## 创建型
 ### [简单工厂模式(factory)](factory/src/main/java/person/nightrunner/简单工厂模式主程序.java)
 ### [工厂方法模式(factory-method)](factory-method/src/main/java/person/nightrunner/工厂方法模式主程序.java)
@@ -17,14 +25,6 @@
 ### [原型模式(prototype)](prototype/src/main/java/person/nightrunner/原型模式主程序.java)
 ### [构造器模式(builder)](builder/src/main/java/person/nightrunner/构造器模式主程序.java)
 ### [享元模式(flyweight)](flyweight/src/main/java/person/nightrunner/享元模式主程序.java)
-
-## 结构型
-### [适配器模式(adapter)](adapter/src/main/java/person/nightrunner/适配器模式主程序.java)
-### [装饰器模式(decorator)](decorator/src/main/java/person/nightrunner/装饰器模式主程序.java)
-### [代理模式(proxy)](proxy/src/main/java/person/nightrunner/静态代理模式主程序.java)--PS:动态代理([JDK](proxy/src/main/java/person/nightrunner/动态代理模式主程序_JDK.java),[Cglib](proxy/src/main/java/person/nightrunner/动态代理模式主程序_CGLIB.java))
-### [外观模式(facade)](facade/src/main/java/person/nightrunner/外观模式主程序.java)
-### [桥接模式(bridge)](bridge/src/main/java/person/nightrunner/桥接模式主程序.java)
-### [组合模式(composite)](composite/src/main/java/person/nightrunner/组合模式主程序.java)
 
 ## 行为型
 ### [策略模式(strategy)](strategy/src/main/java/person/nightrunner/策略模式主程序.java)

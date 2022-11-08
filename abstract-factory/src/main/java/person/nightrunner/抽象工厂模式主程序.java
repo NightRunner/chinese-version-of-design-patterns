@@ -1,24 +1,33 @@
 package person.nightrunner;
 
 import java.util.Scanner;
+import java.util.concurrent.ExecutionException;
 
 /**
- * 魔兽四个种族其实都一个套路!看我抽象工厂如何优雅实现
+ * 魔兽四个种族其实都一个套路!看抽象工厂如何优雅实现
  */
 public class 抽象工厂模式主程序 {
     public static void main(String[] args) {
         do {
-            Scanner sc = new Scanner(System.in);
+            Scanner 输入扫描 = new Scanner(System.in);
             for (种族枚举 种族 : 种族枚举.values()) {
                 System.out.println(种族.索引 + ":" + 种族.名称);
             }
             System.out.println("请输入一个代表种族的数字：");
-            int 索引 = sc.nextInt();
-            种族枚举 种族 = 种族枚举.通过索引获取种族(索引);
-            建筑工厂 工厂实例 = 获取建筑工厂(种族);
-            System.out.println("工厂实例.创建兵营() = " + 工厂实例.创建兵营().getClass().getSimpleName());
-            System.out.println("工厂实例.创建祭坛() = " + 工厂实例.创建祭坛().getClass().getSimpleName());
-            System.out.println("工厂实例.创建商店() = " + 工厂实例.创建商店().getClass().getSimpleName());
+            建筑工厂 工厂实例 = null;
+            try {
+                种族枚举 种族 = 种族枚举.通过索引获取种族(输入扫描.nextInt());
+                工厂实例 = 获取建筑工厂(种族);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                System.out.println("请输入正确的数字!!");
+                continue;
+            }
+
+            System.out.println("工厂实例.创建兵营() = " + getName(工厂实例.创建兵营()));
+            System.out.println("工厂实例.创建祭坛() = " + getName(工厂实例.创建祭坛()));
+            System.out.println("工厂实例.创建商店() = " + getName(工厂实例.创建商店()));
+            break;
         } while (true);
     }
 
@@ -34,6 +43,10 @@ public class 抽象工厂模式主程序 {
         }
 
         throw new RuntimeException("不支持类型:" + 枚举);
+    }
+
+    private static String getName(Object 对象) {
+        return 对象.getClass().getSimpleName();
     }
 
 }
