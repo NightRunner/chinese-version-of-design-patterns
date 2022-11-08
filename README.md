@@ -4,9 +4,7 @@
 
 ## 中文版本的设计模式详解,案例中的代码尽量使用了中文.
 
-### 以游戏和生活中较好理解的场景讲解设计模式的实际用法,便于理解吸收,让设计模式的学习理解不再困难!!!
-
-#### PS:目前正在找工作(Java后端or大数据),欢迎来撩,邮箱690732060@qq.com
+### 以游戏和生活中较好理解的场景讲解设计模式的实际用法,便于理解吸收,让设计模式的学习不再困难!!!
 
 # 传送门
 ## 结构型
@@ -39,19 +37,28 @@
 ### [中介模式(mediator)](mediator/src/main/java/person/nightrunner/中介模式主程序.java)
 ### [解释器模式(interpreter)](interpreter/src/main/java/person/nightrunner/解释器模式主程序.java)
 
-## PS
-### 思路以 [GitHub 中的java-design-patterns为主](https://github.com/iluwatar/java-design-patterns)
+## PS:
+### 很多案例借鉴了 GitHub 中的[java-design-patterns](https://github.com/iluwatar/java-design-patterns)的思路
 
-#### 软件架构
+## 后续计划
+### 后续计划实现各种场景的案例,以及英文命名的版本,让受众更广. 例如:工厂模式的实现可以是魔兽争霸的,也可以有汽车的,暗黑破坏神的等等
 
-尽量不适用第三方包
+## 软件架构
 
-#### 安装教程
+不使用第三方包
 
+## 安装教程
+需要如下环境
 1. Java8+
 2. Maven
 
-#### 参与贡献
+## 参与贡献
 
-欢迎批评指正,提交pull request
+### 欢迎批评指正,提交pull request
+### 作者水平和时间都有限,希望更多的小伙伴们一起来维护这个项目,让设计模式更加简单易于理解.
 
+## 写在最后
+### 作者目前正在找工作(Java后端(10年左右经验)or大数据(2年)),欢迎来撩.
+### 联系方式
+#### 微信:  NightRunnerC
+#### 邮箱:  690732060@qq.com
