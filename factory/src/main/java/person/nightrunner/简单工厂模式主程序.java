@@ -1,12 +1,12 @@
 package person.nightrunner;
 
 /**
- * 想要啥?告诉哥,哥给你生产
+ * 想要啥?告诉工厂,它就可以给你生产
  */
 public class 简单工厂模式主程序 {
     public static void main(String[] args) {
-        System.out.println("汽车 = " + getName(汽车工厂.创建(汽车类型.SUV)));
-        System.out.println("汽车 = " + getName(汽车工厂.创建(汽车类型.轿车)));
+        System.out.println("兵种 = " + getName(汽车工厂.创建(兵种类型.弓箭手)));
+        System.out.println("兵种 = " + getName(汽车工厂.创建(兵种类型.女猎手)));
     }
 
     private static String getName(Object 对象) {
@@ -14,28 +14,30 @@ public class 简单工厂模式主程序 {
     }
 }
 
+enum 兵种类型 {
+    弓箭手,
+    女猎手
+}
+
 class 汽车工厂 {
 
-    public static 汽车 创建(汽车类型 类型) {
-        if (汽车类型.SUV.equals(类型)) {
-            return new SUV();
-        } else if (汽车类型.轿车.equals(类型)) {
-            return new 轿车();
+    public static 兵种 创建(兵种类型 兵种类型) {
+        if (兵种类型.弓箭手.equals(兵种类型)) {
+            return new 弓箭手();
+        } else if (兵种类型.女猎手.equals(兵种类型)) {
+            return new 女猎手();
         }
         return null;
     }
 
 }
 
-interface 汽车 {
+interface 兵种 {
 }
 
-class SUV implements 汽车 {
-}
-
-
-class 轿车 implements 汽车 {
+class 弓箭手 implements 兵种 {
 }
 
 
-
+class 女猎手 implements 兵种 {
+}

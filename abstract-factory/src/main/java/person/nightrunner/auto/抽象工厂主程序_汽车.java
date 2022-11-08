@@ -1,4 +1,4 @@
-package person.nightrunner;
+package person.nightrunner.auto;
 
 /**
  * 大众不光会套娃,一个车型还套两次!!!!

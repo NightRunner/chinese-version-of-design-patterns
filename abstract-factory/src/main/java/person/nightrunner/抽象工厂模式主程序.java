@@ -1,7 +1,6 @@
 package person.nightrunner;
 
 import java.util.Scanner;
-import java.util.concurrent.ExecutionException;
 
 /**
  * 魔兽四个种族其实都一个套路!看抽象工厂如何优雅实现
@@ -57,7 +56,7 @@ enum 种族枚举 {
     Integer 索引;
     String 名称;
 
-    private 种族枚举(Integer 索引, String 名称) {
+    种族枚举(Integer 索引, String 名称) {
         this.索引 = 索引;
         this.名称 = 名称;
     }
